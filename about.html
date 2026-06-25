@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed": "#e5e2dc",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "tertiary-fixed-dim": "#ccc5c8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary-container": "#6d6353",
+                        "primary-container": "#f7f4ee",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-fixed": "#eee1cd",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#faf2f5",
+                        "outline-variant": "#c8c7be",
+                        "on-primary-fixed-variant": "#474743",
+                        "surface": "#fbf9f8",
+                        "on-background": "#1b1c1c",
+                        "on-surface-variant": "#474741",
+                        "on-secondary-fixed-variant": "#4e4637",
+                        "secondary-container": "#eee1cd",
+                        "primary": "#5f5e5a",
+                        "inverse-on-surface": "#f3f0f0",
+                        "secondary": "#675d4e",
+                        "on-tertiary-fixed": "#1e1b1d",
+                        "on-primary-container": "#706f6b",
+                        "tertiary": "#625d60",
+                        "surface-tint": "#5f5e5a",
+                        "outline": "#787770",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#736e70",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#211b0f",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4a4648",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#1c1c18",
+                        "surface-variant": "#e4e2e1",
+                        "tertiary-fixed": "#e8e0e3",
+                        "background": "#fbf9f8",
+                        "surface-bright": "#fbf9f8",
+                        "secondary-fixed-dim": "#d2c5b2",
+                        "inverse-surface": "#303030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1200px",
+                        "unit": "8px",
+                        "xl": "8rem",
+                        "lg": "4rem",
+                        "md": "2rem"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif TC"],
+                        "headline-md": ["Noto Serif TC"],
+                        "headline-lg": ["Noto Serif TC"],
+                        "label-md": ["Noto Sans TC"],
+                        "body-md": ["Noto Sans TC"],
+                        "body-lg": ["Noto Sans TC"],
+                        "label-sm": ["Noto Sans TC"],
+                        "headline-lg-mobile": ["Noto Serif TC"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .ambient-card-shadow {
+            box-shadow: 0 4px 20px rgba(95, 94, 90, 0.04);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            background: rgba(251, 249, 248, 0.8);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- TopAppBar -->
+    <header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center px-margin-desktop py-sm max-w-max-width mx-auto">
+            <div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">
+                寧靜海咖啡廳</div>
+            <nav class="hidden md:flex gap-gutter items-center">
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="home.html">首頁</a>
+                <a class="font-body-md text-label-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 cursor-pointer transition-opacity active:opacity-70"
+                    href="#">關於我們</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="menu.html">菜單</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="gallery.html">空間環境</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="news.html">最新消息</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="contact.html">聯絡我們</a>
+            </nav>
+            <button
+                class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:bg-secondary transition-all active:scale-95">立即預約</button>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section: Identity & Soft Intro -->
+        <section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0"
+                data-alt="A serene Japanese seaside cafe interior at dawn, with soft golden light filtering through large glass windows. The atmosphere is ethereal and calm, featuring warm wood textures, minimalist furniture, and a distant view of a calm blue ocean. The high-key lighting enhances the warm minimalism and slow living aesthetic of the brand."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDctv9htA6u4hu2GFpLXviw_1TCvLQ6cteB8Tmafdft5jtJyZ2kJxzLPQojaneg9d2E4JB0Jr9QzU51r8K4PfVZ46YFwTGO1wrBlXqgj-k9H79nGREqtc_OBuz5swJ2-tDSgDZ785kOqQAyU1JFaJemMPek3eEpR_zQHtrMJ_Za8x1x-3_H8h2Pb8YBTCtcAyd_4sXyjnFdvC14vYB5YFfnPIXm0omYMwh-4mT6njOTpSdFg1ig2AhMzQN59HtidCXolw8SgehawyHn')">
+            </div>
+            <div class="absolute inset-0 bg-primary/10 backdrop-blur-[2px]"></div>
+            <div class="relative z-10 text-center px-margin-mobile">
+                <h1
+                    class="font-headline-xl text-headline-xl text-on-surface mb-xs drop-shadow-sm md:text-headline-xl text-headline-lg-mobile">
+                    寧靜的起源</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">在海浪與咖啡香之間，尋找生活的原點。</p>
+            </div>
+        </section>
+        <!-- Brand Story Section -->
+        <section class="py-xl px-margin-mobile max-w-max-width mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+                <div class="space-y-sm">
+                    <span class="text-primary font-label-md tracking-widest uppercase">Brand Story</span>
+                    <h2
+                        class="font-headline-lg text-headline-lg text-on-surface md:text-headline-lg text-headline-lg-mobile">
+                        海岸線上的咖啡夢</h2>
+                    <div class="space-y-md text-on-surface-variant leading-relaxed">
+                        <p>寧靜海咖啡廳的誕生，始於一個對「慢」的執著。創辦人在都市叢林中奔波多年，直到某次在偏遠海岸線偶遇的一抹夕陽，才意識到感官的甦醒往往源自於靜止。我們決定在海邊放下錨點，打造一個能讓時間慢下來的空間。
+                        </p>
+                        <p>這裡不僅僅是提供咖啡，更是一個靈魂的避風港。每一顆豆子的選擇、每一件器皿的觸感，都承載著我們對品質的堅持與對自然的敬畏。我們希望每一位走進來的客人，都能在推開門的瞬間，卸下外界的喧囂。
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-full overflow-hidden ambient-card-shadow aspect-square relative z-10">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A close-up of a skilled barista's hands carefully performing a pour-over coffee method in a sunlit, minimalist Japanese cafe. The lighting is warm and natural, highlighting the steam rising from the coffee and the rich texture of the ceramic dripper. The background is softly blurred, emphasizing the craft and focus of the 'slow living' philosophy."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-vmZp0dMX79eBwnskxZJ5fWDz9eRol9iTJxsk2EHuAPHeZ2cFfzsIOOJbqI_hcBYBN6orpT4qhd0NoTYexQFOPP5fQf63n7hVAQ0KUeekwBpPP4GcyymHxa9fuCdfNzXoEMPzT1j1ycZQTiK7wvo-bBcYCJ6GSKQN3M-P8r9oMLcXgE51t_rM7lvmLnxsNWGCPDp2IP-Yl8OX8sHnBzAH0LzkXEqqj4fhM9hOoKzvUpoY2B3pQBSWRO_XruxvU1FxSna9pN814sF0" />
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-container rounded-full -z-0"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Philosophy Section -->
+        <section class="bg-primary-container/50 py-xl">
+            <div class="max-w-max-width mx-auto px-margin-mobile text-center">
+                <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-md ambient-card-shadow">
+                    <span class="material-symbols-outlined text-primary text-3xl">waves</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">慢活哲學：與內心對話</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-lg">
+                    <div class="p-lg bg-surface ambient-card-shadow rounded-xl transition-all hover:-translate-y-2">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-sm">感官覺察</h3>
+                        <p class="text-on-surface-variant">專注於當下的香氣、光影與海浪聲，重拾對細微事物的感知力。</p>
+                    </div>
+                    <div class="p-lg bg-surface ambient-card-shadow rounded-xl transition-all hover:-translate-y-2">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-sm">減法生活</h3>
+                        <p class="text-on-surface-variant">剔除不必要的裝飾與干擾，在純粹的空間中找回心靈的留白。</p>
+                    </div>
+                    <div class="p-lg bg-surface ambient-card-shadow rounded-xl transition-all hover:-translate-y-2">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-sm">季節韻律</h3>
+                        <p class="text-on-surface-variant">跟隨自然的節奏，提供隨四季流轉的選品與特製午茶。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interior Areas: Bento Grid Inspired -->
+        <section class="py-xl px-margin-mobile max-w-max-width mx-auto">
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-xl text-center">探索角落</h2>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[800px]">
+                <!-- Bar Area -->
+                <div
+                    class="md:col-span-8 group relative overflow-hidden rounded-xl ambient-card-shadow h-[400px] md:h-full">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A long, minimalist wooden coffee bar in a bright, modern cafe with a coastal view. The bar is clean, featuring premium espresso machines and neat displays of ceramic cups. Soft morning light creates a peaceful, professional atmosphere. Warm minimalism aesthetic with light khaki and coffee brown tones."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz95mSWmPxU09SU5wFgnjCkShMs8ltudoDF3YaMJQ4I46POHGNxO_h2qt8rAbRqDYEM2jEIV5G0p1TuWowBzjmIksyDGiBrBFN2jfEVKk1cGFnfW5NABcbFTUUqP5lcr2BbpMUvjO7-Xt7fYR0WFcpRoppjxyuvxpa23bfZN2LORXbeP8hY-HLSmJb6JYorYgSSGMMazFareR4RDfq5M3_-rgNwzTjfRFIQm_ipb2yi8YowmMSQj7FCjo2xLJPjAvOKzogpQ8lhByU" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-lg">
+                        <span class="text-secondary-fixed font-label-sm mb-xs">Zone 01</span>
+                        <h3 class="font-headline-md text-headline-md text-white">晨曦吧檯</h3>
+                        <p class="text-surface-container-low max-w-md">與咖啡師近距離互動，見證每一杯手沖咖啡的誕生，感受剛研磨開來的濃郁香氣。</p>
+                    </div>
+                </div>
+                <!-- Seating Area -->
+                <div class="md:col-span-4 group relative overflow-hidden rounded-xl ambient-card-shadow h-[400px]">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A cozy seating arrangement next to a large window overlooking the sea. Minimalist chairs and a small round table with a single vase. The light is soft and warm, capturing a peaceful, solitary moment. Tonal layers of cream white and soft grey."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_PN_X3HFnTJpsqoh_px_iZDvV4Fxuxv0BJIlhw3pijNgMVTifLhyfNGs1hfd2wmrFXXmMGDcXIco09quCfUExBSyk3QxTNAPh6LHRf6kAYLvDweatLcClld2393d-ZvOHDdCrzcCrT7NDSag0exAU8KKycU7S089azD9NMuo2yaBgDWIL0U7BtzEwS3q6GqTut7sDMlNNTepNa_5YpvX_ZW_wulG1bo08sQfuT0Yle31EdWkMq3mUXRXY1eD44rhZol0b-By9YWZZ" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-lg">
+                        <span class="text-secondary-fixed font-label-sm mb-xs">Zone 02</span>
+                        <h3 class="font-headline-md text-headline-md text-white">觀海座席</h3>
+                        <p class="text-surface-container-low">正對著地平線的廣闊視野，適合在此靜靜放空，或是與好友低聲談心。</p>
+                    </div>
+                </div>
+                <!-- Reading Nook -->
+                <div class="md:col-span-4 group relative overflow-hidden rounded-xl ambient-card-shadow h-[400px]">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A quiet reading nook in a corner of a cafe with wall-to-wall wooden bookshelves. A comfortable armchair with a soft linen throw, illuminated by a warm pendant light. The atmosphere is scholarly yet incredibly cozy and inviting. Warm, organic textures."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLOc9SbOm-eBr6myFT0C2r6z9QphJRWvPNCnYJtIXmleBArJyN_lZXVZZjOsfWqtrDZ_ymUf8MdTRCrZbnprYzCmHf7tyeh_dEyEySNFo9oIrMvFW777HLlaHZCpjXqcQEIjtHNvXvBTL8awVMRLclvryFNBetVmfJIpGNqA2l6lZHy06PY3atvrxOr2pEg1x5I_25U3ZCqxt2nedjsylKnNpj09SGBIWFOAVjn41f4QCiAakoNpBEekvihqD7sU1evwBUeY1IPQOx" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-lg">
+                        <span class="text-secondary-fixed font-label-sm mb-xs">Zone 03</span>
+                        <h3 class="font-headline-md text-headline-md text-white">靜謐書齋</h3>
+                        <p class="text-surface-container-low">藏書豐富的木質角落，點上一盞溫暖的小燈，讓文字帶領你進入另一個時空。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-xl bg-surface relative overflow-hidden">
+            <div class="max-w-max-width mx-auto px-margin-mobile text-center relative z-10">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">在下一個潮汐到來前，與我們相遇</h2>
+                <p class="text-on-surface-variant mb-lg max-w-xl mx-auto">我們在海岸邊為您保留了一處寧靜，隨時歡迎您的到訪。</p>
+                <button
+                    class="bg-primary text-on-primary px-xl py-md rounded-full font-label-md hover:bg-secondary transition-all shadow-lg hover:shadow-xl">
+                    規劃您的行程
+                </button>
+            </div>
+            <!-- Decorative Element -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary-container/20 rounded-full blur-3xl -z-0">
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full pt-xl pb-lg bg-primary-container dark:bg-surface-container-low">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-max-width mx-auto text-center md:text-left">
+            <div class="space-y-sm">
+                <div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">寧靜海咖啡廳</div>
+                <p class="font-body-md text-body-md text-on-surface-variant">讓每一次呼吸，都充滿海的味道與咖啡的溫暖。</p>
+            </div>
+            <div class="flex flex-col gap-xs">
+                <h4 class="font-label-md font-bold text-primary">探索更多</h4>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">最新消息</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">私人訂製</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">人才招募</a>
+            </div>
+            <div class="flex flex-col gap-xs">
+                <h4 class="font-label-md font-bold text-primary">社群連結</h4>
+                <div class="flex justify-center md:justify-start gap-sm">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Facebook</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Line</a>
+                </div>
+                <div class="mt-sm text-on-surface-variant text-label-sm">
+                    <span class="material-symbols-outlined text-sm mr-xs">location_on</span> 某某市海岸路 123 號
+                </div>
+            </div>
+        </div>
+        <div class="mt-xl pt-md border-t border-outline-variant max-w-max-width mx-auto text-center">
+            <p class="font-body-md text-body-md text-on-surface-variant">© 2024 寧靜海咖啡廳 Serene Sea Cafe. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Simple intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>寧靜海咖啡廳 | 菜單 Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed": "#e5e2dc",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "tertiary-fixed-dim": "#ccc5c8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary-container": "#6d6353",
+                        "primary-container": "#f7f4ee",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-fixed": "#eee1cd",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#faf2f5",
+                        "outline-variant": "#c8c7be",
+                        "on-primary-fixed-variant": "#474743",
+                        "surface": "#fbf9f8",
+                        "on-background": "#1b1c1c",
+                        "on-surface-variant": "#474741",
+                        "on-secondary-fixed-variant": "#4e4637",
+                        "secondary-container": "#eee1cd",
+                        "primary": "#5f5e5a",
+                        "inverse-on-surface": "#f3f0f0",
+                        "secondary": "#675d4e",
+                        "on-tertiary-fixed": "#1e1b1d",
+                        "on-primary-container": "#706f6b",
+                        "tertiary": "#625d60",
+                        "surface-tint": "#5f5e5a",
+                        "outline": "#787770",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#736e70",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#211b0f",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4a4648",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#1c1c18",
+                        "surface-variant": "#e4e2e1",
+                        "tertiary-fixed": "#e8e0e3",
+                        "background": "#fbf9f8",
+                        "surface-bright": "#fbf9f8",
+                        "secondary-fixed-dim": "#d2c5b2",
+                        "inverse-surface": "#303030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1200px",
+                        "unit": "8px",
+                        "xl": "8rem",
+                        "lg": "4rem",
+                        "md": "2rem"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif TC"],
+                        "headline-md": ["Noto Serif TC"],
+                        "headline-lg": ["Noto Serif TC"],
+                        "label-md": ["Noto Sans TC"],
+                        "body-md": ["Noto Sans TC"],
+                        "body-lg": ["Noto Sans TC"],
+                        "label-sm": ["Noto Sans TC"],
+                        "headline-lg-mobile": ["Noto Serif TC"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(103, 93, 78, 0.04);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-chip {
+            transition: all 0.3s ease;
+        }
+
+        .category-chip:hover {
+            background-color: #eee1cd;
+        }
+
+        body {
+            background-color: #f7f4ee;
+            /* Cream White Base */
+            color: #1b1c1c;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md selection:bg-secondary-container">
+    <!-- TopAppBar -->
+    <header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center px-margin-desktop py-sm max-w-max-width mx-auto">
+            <div class="font-headline-md text-headline-md text-primary tracking-tight">寧靜海咖啡廳</div>
+            <nav class="hidden md:flex gap-gutter items-center">
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="home.html">首頁</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="about.html">關於我們</a>
+                <a class="font-body-md text-label-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 cursor-pointer transition-opacity active:opacity-70"
+                    href="#">菜單</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="gallery.html">空間環境</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="news.html">最新消息</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="contact.html">聯絡我們</a>
+            </nav>
+            <button
+                class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md cursor-pointer transition-opacity active:opacity-70">
+                立即預約
+            </button>
+        </div>
+    </header>
+    <main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+        <!-- Hero Section -->
+        <section class="text-center mb-xl">
+            <h1 class="font-headline-xl text-headline-xl mb-sm text-primary">時光的餘味</h1>
+            <p class="text-on-surface-variant max-w-2xl mx-auto font-body-lg text-body-lg">
+                在海浪聲中，我們為您準備了精選的咖啡與手作甜點。讓思緒在香氣中緩緩沈澱，享受專屬於您的靜謐時光。
+            </p>
+        </section>
+        <!-- Category Filter -->
+        <div class="flex flex-wrap justify-center gap-xs mb-lg overflow-x-auto pb-2">
+            <a class="category-chip px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md border border-transparent"
+                href="#coffee">Coffee</a>
+            <a class="category-chip px-6 py-2 rounded-full bg-primary-container text-on-surface-variant font-label-md border border-outline-variant"
+                href="#specialty">Specialty</a>
+            <a class="category-chip px-6 py-2 rounded-full bg-primary-container text-on-surface-variant font-label-md border border-outline-variant"
+                href="#desserts">Desserts</a>
+            <a class="category-chip px-6 py-2 rounded-full bg-primary-container text-on-surface-variant font-label-md border border-outline-variant"
+                href="#meals">Light Meals</a>
+        </div>
+        <!-- Coffee Section -->
+        <section class="mb-xl" id="coffee">
+            <div class="flex items-center gap-sm mb-lg">
+                <span class="material-symbols-outlined text-primary text-3xl">coffee</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">精選咖啡 Coffee</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Coffee Cards -->
+                <div class="bg-surface ambient-shadow p-6 rounded-xl transition-transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-headline-md text-headline-md text-primary">Americano</h3>
+                        <span class="text-secondary font-bold font-label-md">$120</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md">經典美式，精選中深焙豆，帶著堅果與巧克力的沈穩餘韻。</p>
+                    <div class="mt-4 flex gap-xs">
+                        <span
+                            class="px-3 py-1 bg-surface-container text-on-surface-variant text-label-sm rounded-full">Hot
+                            / Iced</span>
+                    </div>
+                </div>
+                <div class="bg-surface ambient-shadow p-6 rounded-xl transition-transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-headline-md text-headline-md text-primary">Latte</h3>
+                        <span class="text-secondary font-bold font-label-md">$150</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md">柔滑拿鐵，濃郁濃縮咖啡與在地小農鮮乳的完美融合。</p>
+                </div>
+                <div class="bg-surface ambient-shadow p-6 rounded-xl transition-transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-headline-md text-headline-md text-primary">Hand-drip</h3>
+                        <span class="text-secondary font-bold font-label-md">$200+</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md">精品手沖，根據時令挑選單品豆，展現豐富的產區風土細節。</p>
+                    <div class="mt-4 flex gap-xs">
+                        <span
+                            class="px-3 py-1 bg-secondary-container text-on-secondary-container text-label-sm rounded-full">Recommended</span>
+                    </div>
+                </div>
+                <div class="bg-surface ambient-shadow p-6 rounded-xl transition-transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-headline-md text-headline-md text-primary">Cappuccino</h3>
+                        <span class="text-secondary font-bold font-label-md">$150</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md">卡布奇諾，細緻如絲的奶泡，與濃郁咖啡完美交織。</p>
+                </div>
+                <div class="bg-surface ambient-shadow p-6 rounded-xl transition-transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-sm">
+                        <h3 class="font-headline-md text-headline-md text-primary">Mocha</h3>
+                        <span class="text-secondary font-bold font-label-md">$165</span>
+                    </div>
+                    <p class="text-on-surface-variant font-body-md">摩卡，融合頂級可可的香甜，層次豐富的暖心選擇。</p>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Section with Asymmetric Layout -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-xl items-center">
+            <div class="lg:col-span-7 rounded-xl overflow-hidden shadow-xl">
+                <img class="w-full h-[400px] object-cover"
+                    data-alt="A high-end, atmospheric photo of a minimalist seaside cafe interior during golden hour. Soft natural light streams through large windows, illuminating a rustic wooden table with a perfectly poured latte and a slice of Basque cheesecake. The aesthetic is warm and serene, with a soft-focus background of the ocean. Muted earthy tones, coffee brown accents, and cream white textures dominate the scene."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEmWH-Ke3DUhfUnyQ4Y9bAS47OD_MPbjZ-vrwuaCM3-DAmaC-lnBiR1v7U_1YkLEiskqUILjWY4mW6QuXtRi5lmEA7fJwvzrYUYiD5RLRIkt87_bVYaofsrWVTZTTY6fyE9Kqx0_JL5ggiFbP7KQnmH71xP-FRJrx4Ftf8OiMgqL6wM5qj5qburVpAScRQ8J7LTGgVDC1qTMJaiLMyg8CdAxwAF0CbCkU79dwmxF2gcm4ELKoWhBCTWQGNrVMrT4ZzGOuE36Q2QnzK" />
+            </div>
+            <div class="lg:col-span-5 lg:pl-lg">
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">今日推薦：巴斯克乳酪蛋糕</h2>
+                <p class="text-on-surface-variant font-body-lg text-body-lg mb-md">
+                    慢火烘焙出微焦的表面，內裡卻是如同冰淇淋般的滑順口感。選用法國頂級奶油乳酪，每一口都是濃郁的幸福感。
+                </p>
+                <button
+                    class="border-2 border-secondary text-secondary px-8 py-3 rounded-full font-label-md hover:bg-secondary-container transition-all">
+                    了解更多甜點
+                </button>
+            </div>
+        </section>
+        <!-- Specialty Drinks Section -->
+        <section class="mb-xl" id="specialty">
+            <div class="flex items-center gap-sm mb-lg">
+                <span class="material-symbols-outlined text-primary text-3xl">local_bar</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">特色飲品 Specialty</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div class="flex gap-sm p-4 bg-primary-container rounded-xl items-center">
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary">Sparkling water</h3>
+                        <p class="text-on-surface-variant font-body-md">氣泡水，加入時令鮮果與薄荷，沁涼解渴。 $130</p>
+                    </div>
+                </div>
+                <div class="flex gap-sm p-4 bg-primary-container rounded-xl items-center">
+                    <div class="flex-1">
+                        <h3 class="font-headline-md text-headline-md text-primary">Fruit tea</h3>
+                        <p class="text-on-surface-variant font-body-md">鮮果茶，天然無添加，慢熬果醬調配出清甜風味。 $160</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Grid for Desserts & Meals -->
+        <section class="mb-xl" id="desserts">
+            <div class="flex items-center gap-sm mb-lg">
+                <span class="material-symbols-outlined text-primary text-3xl">cake</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">手作甜點與輕食</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[600px]">
+                <!-- Basque Cheesecake -->
+                <div
+                    class="md:col-span-2 md:row-span-1 bg-surface ambient-shadow p-6 rounded-xl flex flex-col justify-end relative overflow-hidden group">
+                    <div class="z-10">
+                        <h3 class="font-headline-md text-headline-md text-primary">Basque Cheesecake</h3>
+                        <p class="text-on-surface-variant font-body-md">每日限量，口感濃郁。 $140</p>
+                    </div>
+                    <span
+                        class="absolute top-4 right-4 bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded-full text-label-sm font-bold">Signature</span>
+                </div>
+                <!-- Tiramisu -->
+                <div
+                    class="md:col-span-1 md:row-span-1 bg-surface ambient-shadow p-6 rounded-xl flex flex-col justify-end">
+                    <h3 class="font-headline-md text-headline-md text-primary">Tiramisu</h3>
+                    <p class="text-on-surface-variant font-body-md">酒香濃郁。 $160</p>
+                </div>
+                <!-- Cookies -->
+                <div
+                    class="md:col-span-1 md:row-span-1 bg-surface ambient-shadow p-6 rounded-xl flex flex-col justify-end">
+                    <h3 class="font-headline-md text-headline-md text-primary">Cookies</h3>
+                    <p class="text-on-surface-variant font-body-md">香脆手工。 $60</p>
+                </div>
+                <!-- Light Meals Bento -->
+                <div class="md:col-span-2 md:row-span-1 bg-secondary-container p-8 rounded-xl flex flex-col justify-center"
+                    id="meals">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-sm">輕食餐點 Light Meals</h2>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-outline-variant pb-2">
+                            <span class="font-body-lg text-body-lg text-on-secondary-container font-medium">Sandwich
+                                潛艇堡</span>
+                            <span class="text-on-secondary-container">$180</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-outline-variant pb-2">
+                            <span class="font-body-lg text-body-lg text-on-secondary-container font-medium">Salad
+                                溫沙拉</span>
+                            <span class="text-on-secondary-container">$220</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-outline-variant pb-2">
+                            <span class="font-body-lg text-body-lg text-on-secondary-container font-medium">Brunch
+                                經典早午餐</span>
+                            <span class="text-on-secondary-container">$320</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Croissant -->
+                <div
+                    class="md:col-span-2 md:row-span-1 bg-surface ambient-shadow p-6 rounded-xl flex items-center justify-between">
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-primary">Croissant</h3>
+                        <p class="text-on-surface-variant font-body-md">法國AOP奶油製作，外皮酥脆內裡蓬鬆。</p>
+                    </div>
+                    <span class="text-secondary font-bold text-headline-md">$80</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full pt-xl pb-lg bg-primary-container dark:bg-surface-container-low mt-xl">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-max-width mx-auto text-center md:text-left">
+            <div>
+                <div class="font-headline-md text-headline-md text-primary mb-sm">寧靜海咖啡廳</div>
+                <p class="text-on-surface-variant font-body-md opacity-80">
+                    宜蘭縣某某鎮海濱路 101 號<br />
+                    Mon - Sun / 10:00 - 18:00
+                </p>
+            </div>
+            <div class="flex flex-col gap-xs">
+                <span class="font-label-md text-primary mb-xs">探索</span>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">空間故事</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">聯絡我們</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">人才招募</a>
+            </div>
+            <div class="flex flex-col gap-xs">
+                <span class="font-label-md text-primary mb-xs">追蹤我們</span>
+                <div class="flex justify-center md:justify-start gap-sm">
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                        href="#">Instagram</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                        href="#">Facebook</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+                        href="#">Line</a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-max-width mx-auto px-margin-desktop mt-lg pt-sm border-t border-outline-variant/30 text-center text-on-surface-variant opacity-60 font-body-md text-body-md">
+            © 2024 寧靜海咖啡廳 Serene Sea Cafe. All Rights Reserved.
+        </div>
+    </footer>
+    <script>
+        // Smooth reveal animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-8');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>

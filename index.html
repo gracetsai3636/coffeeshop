@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>寧靜海咖啡廳 Serene Sea Cafe</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&amp;family=Noto+Sans+TC:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed": "#e5e2dc",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "tertiary-fixed-dim": "#ccc5c8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary-container": "#6d6353",
+                        "primary-container": "#f7f4ee",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-fixed": "#eee1cd",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#faf2f5",
+                        "outline-variant": "#c8c7be",
+                        "on-primary-fixed-variant": "#474743",
+                        "surface": "#fbf9f8",
+                        "on-background": "#1b1c1c",
+                        "on-surface-variant": "#474741",
+                        "on-secondary-fixed-variant": "#4e4637",
+                        "secondary-container": "#eee1cd",
+                        "primary": "#5f5e5a",
+                        "inverse-on-surface": "#f3f0f0",
+                        "secondary": "#675d4e",
+                        "on-tertiary-fixed": "#1e1b1d",
+                        "on-primary-container": "#706f6b",
+                        "tertiary": "#625d60",
+                        "surface-tint": "#5f5e5a",
+                        "outline": "#787770",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#736e70",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#211b0f",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4a4648",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#1c1c18",
+                        "surface-variant": "#e4e2e1",
+                        "tertiary-fixed": "#e8e0e3",
+                        "background": "#fbf9f8",
+                        "surface-bright": "#fbf9f8",
+                        "secondary-fixed-dim": "#d2c5b2",
+                        "inverse-surface": "#303030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1200px",
+                        "unit": "8px",
+                        "xl": "8rem",
+                        "lg": "4rem",
+                        "md": "2rem"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif TC"],
+                        "headline-md": ["Noto Serif TC"],
+                        "headline-lg": ["Noto Serif TC"],
+                        "label-md": ["Noto Sans TC"],
+                        "body-md": ["Noto Sans TC"],
+                        "body-lg": ["Noto Sans TC"],
+                        "label-sm": ["Noto Sans TC"],
+                        "headline-lg-mobile": ["Noto Serif TC"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F7F4EE;
+            /* Level 0 Base Cream White */
+            color: #1b1c1c;
+            scroll-behavior: smooth;
+        }
+
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(95, 94, 90, 0.04);
+        }
+
+        .text-shadow-hero {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-body-md selection:bg-secondary-fixed">
+    <!-- TopAppBar -->
+    <header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center px-margin-desktop py-sm max-w-max-width mx-auto">
+            <div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">
+                寧靜海咖啡廳</div>
+            <nav class="hidden md:flex gap-gutter items-center">
+                <a class="font-body-md text-label-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 transition-all duration-300"
+                    href="#">首頁</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="about.html">關於我們</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="menu.html">菜單</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="gallery.html">空間環境</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="news.html">最新消息</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="contact.html">聯絡我們</a>
+                <button
+                    class="ml-4 px-6 py-2 bg-primary text-on-primary rounded-full font-label-md hover:bg-secondary transition-all cursor-pointer active:opacity-70">立即預約</button>
+            </nav>
+            <div class="md:hidden">
+                <span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center"
+                    data-alt="A cinematic, wide-angle photograph of a serene Japanese-style seaside cafe interior during the golden hour. Soft sun rays filter through large floor-to-ceiling windows, illuminating warm oak wooden furniture and minimalist decor. The atmosphere is quiet and ethereal, with a hint of sea mist visible through the glass. The color palette is composed of soft creams, warm beiges, and muted coffee browns, creating a peaceful and welcoming environment."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnR6ssp4VdjZlEvVfZwNFjv2SwXfni0VKbnB7-kbco9PAaZbcNWqAlnKU1B-nBfQXDkWU-70_LFLYDM1GxeqbFmauUWlP3cedqiB0P059G3d5h6Vb571OzpWIFk6gL_OXXUlzB5Z8HDQFBc4kQt4SxDsrm5oiqqjgQvbNx23BbKSH8Hyq8nBvPs4cwtiEjFHwKQZ1MJmyybHyanoaDNIa7qKEyL7CLg2A6ysxjr4r7J6Jizq7L2-60SSE6h3GADEWT7y2g8jy5-gek')">
+                </div>
+                <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile">
+                <h1 class="font-headline-xl text-headline-xl text-white mb-4 text-shadow-hero">寧靜海咖啡廳</h1>
+                <p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl mx-auto">在忙碌生活中，留一段屬於自己的寧靜時光。</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                        class="px-8 py-3 bg-primary text-on-primary rounded-full font-label-md hover:bg-secondary transition-all soft-shadow">查看菜單</button>
+                    <button
+                        class="px-8 py-3 border-2 border-white/80 text-white rounded-full font-label-md hover:bg-white/10 backdrop-blur-sm transition-all">關於我們</button>
+                </div>
+            </div>
+        </section>
+        <!-- Intro Section (Brand Story) -->
+        <section class="py-xl px-margin-desktop max-w-max-width mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+                <div class="space-y-6">
+                    <span class="text-secondary font-label-md tracking-widest block">BRAND STORY</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">一杯咖啡，一段慢下來的時光</h2>
+                    <div class="w-12 h-1 bg-secondary-fixed"></div>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed">
+                        坐落在海岸線旁的「寧靜海」，是我們為都市人保留的一片淨土。這裡沒有匆忙的腳步，只有海浪的節奏與手沖咖啡的香氣。我們堅持選用高品質單品豆，以專業的工藝留住每一滴甘醇。無論是獨自靜思，還是與好友漫談，在寧靜海，時間由你掌控。
+                    </p>
+                    <button class="font-label-md text-primary flex items-center gap-2 group">
+                        探索更多歷史 <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden soft-shadow">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A close-up shot of a barista carefully pouring hot water over fresh coffee grounds in a ceramic dripper. The focus is sharp on the blooming coffee and the thin stream of water, with a background of a warm, minimalist wooden cafe interior. Natural light from a nearby window creates a soft, hazy glow. The aesthetic is clean and focused, reflecting a 'slow living' philosophy with a palette of warm woods and soft light."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNj5wia3n2mm36gLWO1086UqD5fca_xagCCyirFurUZlNZXNG6S8frnJRkXPNkLghuEvV_H6KPlhOextyiZBhfH9qgnRlnQQpnwEoJWpGU_UeNGuBP9NGvFPjWVEEAkkwah2LAg2_bszhowVInoIX9K0rsNN7Cqq5M79kqT4fR3ae-pnu2roZMFKQv_JaftRQVPV261Tm1SMQlRoUzAoetipvro-UfeBh6-WN_Tcx13e4AxuQrEIvZuUtoA8o5uodsf7CuOevTCJHP" />
+                    </div>
+                    <div
+                        class="absolute -bottom-8 -left-8 w-48 h-48 rounded-xl overflow-hidden border-8 border-surface-container-lowest hidden lg:block">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A minimalist overhead shot of a single cup of latte art featuring a delicate leaf pattern, sitting on a light-colored wooden table next to a small sprig of dried flowers. The lighting is soft and natural, emphasizing the creamy texture of the milk foam. The colors are muted and warm, following the cafe's serene sea theme."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoW74hwhGH95t_SvGRht39nQRN7ZPbq7e-OzBsynM_4K0jjKH-C1nWx5a-cwvu25uFKpR1pe8VQmUkJzKY6bpiG-ZudkypO6fbJ6Iw2l2BnTP7WkszFnSmtmcuLzo92LopS1gvqawSVemfJFvIusHONxTVNJd_BMZkwooUohufPIp4UqWiT3UcKxwN2fUvTCEdlth-k1cPCjBEiQlmZfCj4xi4PjadV_hU6d-2YC4-YN5War_UJP9NmBUSwOcLO2O1tdfUBVHB1xR0" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Section (Bento Style) -->
+        <section class="py-xl bg-surface-container-low">
+            <div class="px-margin-desktop max-w-max-width mx-auto">
+                <div class="text-center mb-md">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">嚴選推薦</h2>
+                    <p class="font-body-md text-on-surface-variant mt-2">我們用心準備每一份美味，讓您細品生活。</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <!-- Large Card: Hand-drip -->
+                    <div
+                        class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest soft-shadow">
+                        <div class="aspect-[16/9] w-full">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A collection of specialized hand-drip coffee equipment arranged artistically on a textured concrete surface. Includes a copper kettle, a glass server, and high-quality roasted beans. The lighting is moody and directional, highlighting the metallic textures and the rich brown of the beans. The overall vibe is sophisticated, craft-oriented, and quiet."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg3nzJWyeb-SvjEhSwvHEOfJIukGFvPT4rJOCLmuEmg6h1rNGzIIk7oHJat_V5PMBtevUY1zB_S9SOKT-yK1IsHP1VpHR3F9DIcgRNndF17fRjokQ4fOD9VUGAkqaPyehJ_FlddCBD2mE36vi4QN7wnV75yY_JxNzstFQeoOi2Oxj4FFclS7yIHKN2cti--nLsMCBX_e5BcqHtA_oZtd4z91iIi9TpLLCm_BF1nqvPqoCUE9lxtO3IyBd3wFrkpgBDhIB_liGXD0Ms" />
+                        </div>
+                        <div
+                            class="p-sm absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent text-white">
+                            <span
+                                class="inline-block px-3 py-1 bg-secondary text-on-secondary rounded-full text-label-sm mb-2">Seasonal
+                                Special</span>
+                            <h3 class="font-headline-md text-headline-md">手沖精品咖啡 Hand Drip</h3>
+                            <p class="font-body-md opacity-90">嚴選各產區單品，呈現最純粹的地貌風味。</p>
+                        </div>
+                    </div>
+                    <!-- Small Card 1: Latte -->
+                    <div
+                        class="md:col-span-4 flex flex-col bg-surface-container-lowest rounded-xl soft-shadow overflow-hidden group">
+                        <div class="aspect-square w-full">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A beautifully presented hot latte in a ceramic mug, with steam rising softly against a blurred background of a cozy cafe. The latte art is intricate, and the overall color temperature is warm and inviting. The scene captures the essence of a comfortable afternoon at Serene Sea Cafe."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Z_ZBoSEa6LBNf3-q0s0BoXj7E9KvOMs9KbC6Lmg_ULPGavM0ndun_JeE76AskCaKIhm6ayQZiBasubM0hmdZmRkiWeWBGiraQvHB3IZCI6GYfhgEdGMR_pDdmna5FHf83knC0YA3ZaPwAK869kgaQeXjqDZQtp87rz0esPSUkEum5tDWehZlr7eB25PgOT2_AyBXZR_xtN_RksZwA_dFaya8l8yH6TjYe93cyXZnNgLN5ryO6hEawLBEvMBYqTNke-f2gpK6LlE_" />
+                        </div>
+                        <div class="p-sm">
+                            <h3 class="font-headline-md text-headline-md text-primary">經典拿鐵 Latte</h3>
+                            <p class="font-body-md text-on-surface-variant mt-1">濃縮與鮮乳的完美融合，溫潤入喉。</p>
+                        </div>
+                    </div>
+                    <!-- Small Card 2: Desserts -->
+                    <div
+                        class="md:col-span-4 flex flex-col bg-surface-container-lowest rounded-xl soft-shadow overflow-hidden group">
+                        <div class="aspect-square w-full">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A minimalist presentation of a decadent chocolate cake slice on a handcrafted ceramic plate, garnished with a single fresh mint leaf. The background is a clean, neutral tabletop with soft ambient light. The image evokes a sense of high-quality, artisanal dessert preparation in a minimalist setting."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCkcc2N6fEgOBM_N5TbphgzMLIkMZZBnamRvJ6-gQjVoUScRlDIjGBpRBF-IH2jRcQIpIWJy5mQpteFjpbn9hY_vXQo6bl6Enine6sca9WYyECHCunAFaj-iel4qyAT0_T1IPd6p2PKkiCQCMq6RiVy0zqoxu-v5-gq0K-HKGvW9JqCwUw6zmQVpS2TN4AoF_9GCr44Fgd2PGJaqIYZ5J6LaV5Mhdb2_nEDyz1i5I4TE3yFl131LnY4U9aJx710oG6g2g4QNE8ldqo" />
+                        </div>
+                        <div class="p-sm">
+                            <h3 class="font-headline-md text-headline-md text-primary">手作甜點 Desserts</h3>
+                            <p class="font-body-md text-on-surface-variant mt-1">每日限量製作，搭配咖啡的最佳夥伴。</p>
+                        </div>
+                    </div>
+                    <!-- Medium Action Card -->
+                    <div class="md:col-span-8 bg-secondary-container rounded-xl flex items-center p-md">
+                        <div class="max-w-md">
+                            <h3 class="font-headline-md text-headline-md text-on-secondary-container">尋找您的專屬風味</h3>
+                            <p class="font-body-md text-on-secondary-container/80 mt-2 mb-6">我們的咖啡師將為您推薦最適合當下心情的飲品。</p>
+                            <button
+                                class="px-8 py-3 bg-primary text-on-primary rounded-full font-label-md hover:shadow-lg transition-all">瀏覽完整菜單</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Space Features (Icon-based cards) -->
+        <section class="py-xl px-margin-desktop max-w-max-width mx-auto">
+            <div class="text-center mb-lg">
+                <h2 class="font-headline-lg text-headline-lg text-primary">空間與環境</h2>
+                <p class="font-body-md text-on-surface-variant">為您打造的慢活場域</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="text-center p-md bg-surface border-b-2 border-transparent hover:border-secondary transition-all">
+                    <div
+                        class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">chair</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">舒適座位</h3>
+                    <p class="font-body-md text-on-surface-variant">人體工學設計座椅，長時間久坐也能保持自在與放鬆。</p>
+                </div>
+                <div
+                    class="text-center p-md bg-surface border-b-2 border-transparent hover:border-secondary transition-all">
+                    <div
+                        class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">light_mode</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">自然採光</h3>
+                    <p class="font-body-md text-on-surface-variant">大片採光設計，引導和煦日光灑落，營造通透明亮感。</p>
+                </div>
+                <div
+                    class="text-center p-md bg-surface border-b-2 border-transparent hover:border-secondary transition-all">
+                    <div
+                        class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">wifi</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">免費 Wi-Fi</h3>
+                    <p class="font-body-md text-on-surface-variant">提供穩定高速無線網路，亦是您遠端辦公的理想選擇。</p>
+                </div>
+            </div>
+        </section>
+        <!-- News Section -->
+        <section class="py-xl bg-primary-container">
+            <div class="px-margin-desktop max-w-max-width mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-lg">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary">最新消息</h2>
+                        <p class="font-body-md text-on-surface-variant">與您分享寧靜海的點滴動態</p>
+                    </div>
+                    <a class="font-label-md text-primary hover:underline transition-all mt-4 md:mt-0"
+                        href="#">查看全部消息</a>
+                </div>
+                <div class="space-y-4">
+                    <div
+                        class="bg-surface p-sm rounded-xl flex flex-col md:flex-row items-center gap-sm group cursor-pointer hover:bg-white transition-all">
+                        <div class="text-label-md font-bold text-secondary w-full md:w-32">2024.05.20</div>
+                        <div
+                            class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-label-sm">
+                            活動公告</div>
+                        <div class="flex-grow font-body-lg text-primary group-hover:translate-x-2 transition-transform">
+                            夏季新品「西西里氣泡咖啡」沁涼上市</div>
+                        <span class="material-symbols-outlined text-primary-fixed-dim">chevron_right</span>
+                    </div>
+                    <div
+                        class="bg-surface p-sm rounded-xl flex flex-col md:flex-row items-center gap-sm group cursor-pointer hover:bg-white transition-all">
+                        <div class="text-label-md font-bold text-secondary w-full md:w-32">2024.05.12</div>
+                        <div
+                            class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-label-sm">
+                            店休通知</div>
+                        <div class="flex-grow font-body-lg text-primary group-hover:translate-x-2 transition-transform">
+                            【5/18 店內維護】暫停營業一天</div>
+                        <span class="material-symbols-outlined text-primary-fixed-dim">chevron_right</span>
+                    </div>
+                    <div
+                        class="bg-surface p-sm rounded-xl flex flex-col md:flex-row items-center gap-sm group cursor-pointer hover:bg-white transition-all">
+                        <div class="text-label-md font-bold text-secondary w-full md:w-32">2024.04.30</div>
+                        <div
+                            class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-label-sm">
+                            咖啡講堂</div>
+                        <div class="flex-grow font-body-lg text-primary group-hover:translate-x-2 transition-transform">
+                            手沖職人工作坊：探索不同水溫對風味的影響</div>
+                        <span class="material-symbols-outlined text-primary-fixed-dim">chevron_right</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full pt-xl pb-lg bg-primary-container dark:bg-surface-container-low">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-max-width mx-auto text-center md:text-left">
+            <div>
+                <div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-4">寧靜海咖啡廳
+                </div>
+                <p class="font-body-md text-on-surface-variant max-w-xs">致力於打造一個能讓心靈歇息的空間，透過咖啡與自然，找回生活的平衡。</p>
+            </div>
+            <div>
+                <h4 class="font-label-md text-primary mb-4 font-bold">快速連結</h4>
+                <ul class="space-y-2">
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">菜單介紹</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">預約席位</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">場地租借</a></li>
+                    <li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">隱私權政策</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label-md text-primary mb-4 font-bold">聯絡與社群</h4>
+                <p class="font-body-md text-on-surface-variant mb-4">
+                    地址：海濱市沙灘路 88 號<br />
+                    電話：(02) 2345-6789
+                </p>
+                <div class="flex justify-center md:justify-start gap-4">
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-200"
+                        href="#">Instagram</a>
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-200"
+                        href="#">Facebook</a>
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-all duration-200"
+                        href="#">Line</a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="mt-xl pt-sm border-t border-outline-variant/30 text-center px-margin-desktop max-w-max-width mx-auto">
+            <p class="font-body-md text-label-sm text-on-surface-variant">© 2024 寧靜海咖啡廳 Serene Sea Cafe. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Simple micro-interaction for navbar transparency shift
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Entrance animation logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+                observer.observe(section);
+            });
+            // Immediately show hero
+            const hero = document.querySelector('section');
+            hero.classList.remove('opacity-0', 'translate-y-8');
+            hero.classList.add('opacity-100', 'translate-y-0');
+        });
+    </script>
+</body>
+
+</html>

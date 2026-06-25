@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>聯絡我們 - 寧靜海咖啡廳 Serene Sea Cafe</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-fixed": "#e5e2dc",
+                        "primary-fixed-dim": "#c9c6c1",
+                        "tertiary-fixed-dim": "#ccc5c8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary-container": "#6d6353",
+                        "primary-container": "#f7f4ee",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-fixed": "#eee1cd",
+                        "inverse-primary": "#c9c6c1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#faf2f5",
+                        "outline-variant": "#c8c7be",
+                        "on-primary-fixed-variant": "#474743",
+                        "surface": "#fbf9f8",
+                        "on-background": "#1b1c1c",
+                        "on-surface-variant": "#474741",
+                        "on-secondary-fixed-variant": "#4e4637",
+                        "secondary-container": "#eee1cd",
+                        "primary": "#5f5e5a",
+                        "inverse-on-surface": "#f3f0f0",
+                        "secondary": "#675d4e",
+                        "on-tertiary-fixed": "#1e1b1d",
+                        "on-primary-container": "#706f6b",
+                        "tertiary": "#625d60",
+                        "surface-tint": "#5f5e5a",
+                        "outline": "#787770",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#736e70",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#211b0f",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4a4648",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#1c1c18",
+                        "surface-variant": "#e4e2e1",
+                        "tertiary-fixed": "#e8e0e3",
+                        "background": "#fbf9f8",
+                        "surface-bright": "#fbf9f8",
+                        "secondary-fixed-dim": "#d2c5b2",
+                        "inverse-surface": "#303030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1200px",
+                        "unit": "8px",
+                        "xl": "8rem",
+                        "lg": "4rem",
+                        "md": "2rem"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif TC"],
+                        "headline-md": ["Noto Serif TC"],
+                        "headline-lg": ["Noto Serif TC"],
+                        "label-md": ["Noto Sans TC"],
+                        "body-md": ["Noto Sans TC"],
+                        "body-lg": ["Noto Sans TC"],
+                        "label-sm": ["Noto Sans TC"],
+                        "headline-lg-mobile": ["Noto Serif TC"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .ambient-card {
+            background-color: #FBF9F6;
+            box-shadow: 0 4px 20px rgba(109, 99, 83, 0.04);
+        }
+
+        .form-input-border {
+            border-bottom: 2px solid #eee1cd;
+            background-color: rgba(247, 244, 238, 0.5);
+        }
+
+        .form-input-border:focus {
+            border-bottom: 2px solid #675d4e;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopAppBar -->
+    <header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-sm max-w-max-width mx-auto">
+            <h1
+                class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight cursor-pointer transition-opacity active:opacity-70">
+                寧靜海咖啡廳</h1>
+             <nav class="hidden md:flex gap-gutter items-center">
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="home.html">首頁</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="about.html">關於我們</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="menu.html">菜單</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="gallery.html">空間環境</a>
+                <a class="font-body-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors cursor-pointer transition-opacity active:opacity-70"
+                    href="news.html">最新消息</a>
+                <a class="font-body-md text-label-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 cursor-pointer transition-opacity active:opacity-70"
+                    href="#">聯絡我們</a>
+            </nav>
+            <button
+                class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:bg-secondary transition-all active:scale-95">
+                立即預約
+            </button>
+        </div>
+    </header>
+    <main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+        <!-- Hero Section -->
+        <section class="mb-xl text-center">
+            <h2 class="font-headline-xl text-headline-xl mb-sm md:text-headline-xl text-headline-lg-mobile">與我們聯繫</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                在海浪聲與咖啡香氣中，我們期待與您的每一次相遇。不論是訂位需求或意見回饋，歡迎隨時與我們聯絡。
+            </p>
+        </section>
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- Left: Info Cards -->
+            <div class="lg:col-span-5 space-y-gutter">
+                <div class="ambient-card p-md rounded-xl">
+                    <h3 class="font-headline-md text-headline-md mb-md text-secondary">門市資訊</h3>
+                    <ul class="space-y-sm">
+                        <li class="flex items-start gap-sm">
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="location_on">location_on</span>
+                            <div>
+                                <p class="font-label-md text-on-surface-variant">地址</p>
+                                <p class="font-body-md">新北市石門區海濱路 99 號</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-sm">
+                            <span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                            <div>
+                                <p class="font-label-md text-on-surface-variant">電話</p>
+                                <p class="font-body-md">02-2345-6789</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-sm">
+                            <span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+                            <div>
+                                <p class="font-label-md text-on-surface-variant">營業時間</p>
+                                <p class="font-body-md">週一至週五 10:00 - 18:00</p>
+                                <p class="font-body-md">週六至週日 09:00 - 20:00</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ambient-card p-md rounded-xl">
+                    <h3 class="font-headline-md text-headline-md mb-md text-secondary">社群連結</h3>
+                    <div class="flex gap-md">
+                        <a class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group"
+                            href="#">
+                            <span class="material-symbols-outlined" data-icon="share">share</span>
+                            <span class="font-label-md">Instagram</span>
+                        </a>
+                        <a class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group"
+                            href="#">
+                            <span class="material-symbols-outlined" data-icon="public">public</span>
+                            <span class="font-label-md">Facebook</span>
+                        </a>
+                        <a class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors group"
+                            href="#">
+                            <span class="material-symbols-outlined" data-icon="chat">chat</span>
+                            <span class="font-label-md">Line</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Decorative Image -->
+                <div class="hidden lg:block relative h-64 rounded-xl overflow-hidden shadow-sm">
+                    <div class="absolute inset-0 bg-black/10 z-10"></div>
+                    <img class="w-full h-full object-cover"
+                        data-alt="A serene cinematic wide shot of a Japanese minimalist cafe interior with large glass windows facing a calm, turquoise ocean. The morning sunlight filters through soft linen curtains, casting warm shadows on natural wood furniture and a simple ceramic coffee cup on a table. The atmosphere is peaceful, mindful, and carries a high-end hospitality aesthetic with a warm cream and coffee-brown color palette."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbvJx7yC-o7w9HcSO1vjvCzmTfZZy4U4ZVKibBDFUEgO0r3aFxFvRXdN8d01jguQeow1ctIkZGFQ48ZaSq-fS1OKw_LJq8_IOL7jdqMpVpe7oqJNrvw4TvEzKUBSc_sLo5NkwJE7rWyq3e1JNJTHlkUJPz55Cjomt6s8fvE2YrwFLc7pXlb_KkhlsHAW7a7lzL9E6OcdiDSXRJJ3GrJeF_v5pS2yvUf2_eVijU8ZzObgcTcqOGZjeFwj4ZlIAu757r3hlVAtm0OlC" />
+                </div>
+            </div>
+            <!-- Right: Contact Form -->
+            <div class="lg:col-span-7 bg-surface-container-lowest p-md md:p-lg rounded-xl shadow-sm">
+                <h3 class="font-headline-md text-headline-md mb-lg text-primary">留言給我們</h3>
+                <form class="space-y-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                        <div class="flex flex-col gap-xs">
+                            <label class="font-label-md text-on-surface-variant">姓名</label>
+                            <input class="form-input-border p-sm font-body-md border-none rounded-none"
+                                placeholder="您的稱呼" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-xs">
+                            <label class="font-label-md text-on-surface-variant">聯絡電話</label>
+                            <input class="form-input-border p-sm font-body-md border-none rounded-none"
+                                placeholder="0900-000-000" type="tel" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <label class="font-label-md text-on-surface-variant">電子郵件</label>
+                        <input class="form-input-border p-sm font-body-md border-none rounded-none"
+                            placeholder="example@email.com" type="email" />
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <label class="font-label-md text-on-surface-variant">訊息內容</label>
+                        <textarea class="form-input-border p-sm font-body-md border-none rounded-none resize-none"
+                            placeholder="請輸入您想說的話..." rows="4"></textarea>
+                    </div>
+                    <div class="pt-sm">
+                        <button
+                            class="w-full md:w-auto bg-primary text-on-primary px-xl py-3 rounded-lg font-label-md hover:bg-secondary transition-all active:scale-95 flex items-center justify-center gap-sm"
+                            type="submit">
+                            <span>送出訊息</span>
+                            <span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Map Section -->
+        <section class="mt-xl">
+            <div class="ambient-card rounded-xl overflow-hidden h-[450px] relative group">
+                <div class="absolute inset-0 z-0 bg-surface-container-high animate-pulse"></div>
+                <!-- data-location for map generation -->
+                <div class="absolute inset-0 z-10 w-full h-full flex items-center justify-center bg-surface-container-low/50"
+                    data-location="Shihmen District, New Taipei City" style="">
+                    <div
+                        class="text-center p-md bg-surface/80 backdrop-blur-md rounded-lg shadow-sm border border-outline-variant">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-sm" data-icon="map">map</span>
+                        <p class="font-headline-md">寧靜海咖啡廳 地圖</p>
+                        <p class="font-body-md text-on-surface-variant">正在載入濱海地圖...</p>
+                    </div>
+                </div>
+                <iframe allowfullscreen=""
+                    class="absolute inset-0 w-full h-full z-20 opacity-90 grayscale-[30%] hover:grayscale-0 transition-all duration-700"
+                    height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14436.568266236528!2d121.5756475!3d25.291079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442d765798031d1%3A0x7d64390f757f5978!2z5paw5YyX5biC55-z6ZaA5Y2A!5e0!3m2!1szh-TW!2stw!4v1700000000000!5m2!1szh-TW!2stw"
+                    style="border:0;" width="100%">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full pt-xl pb-lg bg-primary-container dark:bg-surface-container-low">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto text-center md:text-left items-center">
+            <div class="space-y-sm">
+                <h4 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">寧靜海咖啡廳</h4>
+                <p class="font-body-md text-on-surface-variant">一處讓靈魂暫歇的海濱角落。</p>
+            </div>
+            <div class="flex justify-center gap-lg">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Instagram</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Facebook</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Line</a>
+            </div>
+            <div class="md:text-right">
+                <p class="font-body-md text-body-md text-on-surface-variant">© 2024 寧靜海咖啡廳 Serene Sea Cafe. All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions for form inputs
+        document.querySelectorAll('input, textarea').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.parentElement.querySelector('label').classList.add('text-primary');
+            });
+            element.addEventListener('blur', () => {
+                element.parentElement.querySelector('label').classList.remove('text-primary');
+            });
+        });
+
+        // Form Submission Logic (Visual only)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const button = form.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="sync">sync</span> 傳送中...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerHTML = '<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span> 已送出';
+                button.classList.replace('bg-primary', 'bg-tertiary');
+                form.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
